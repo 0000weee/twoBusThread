@@ -13,6 +13,8 @@ typedef struct {
 } BusTask;
 
 pthread_mutex_t zone_lock[NUM_ZONES];
+pthread_mutex_t print_lock;
+
 int zone_people[NUM_ZONES] = {500, 50, 100, 250, 100}; //1~4區分別有：50、100、250、100筆資料要到
 
 int Min(int a, int b) {
@@ -20,6 +22,8 @@ int Min(int a, int b) {
 }
 
 void print_start_pick_up_msg(BusTask* t) {
+    // 鎖住 STDOUT
+    pthread_mutex_lock(&print_lock);
     printf("Escort Team %d ENTERS Zone 0\n", t->bus_id);
     printf("    Zone 0 has %d shoppers to pick up\n", zone_people[0]);
     printf("    Picking up shoppers...\n");
@@ -29,9 +33,12 @@ void print_end_pick_up_msg(BusTask* t) {
     printf("    Escort Team %d is at Zone 0 and has %d/%d shoppers\n", t->bus_id, t->passenger_num, t->bus_capacity);
     printf("    Zone 0 has %d shoppers to pick up\n", zone_people[0]);
     printf("Escort Team %d LEAVES Zone 0\n", t->bus_id);
+    pthread_mutex_unlock(&print_lock);
 }
 
 void print_start_drop_off_msg(BusTask* t, int zone_id) {
+    // 鎖住 STDOUT
+    pthread_mutex_lock(&print_lock);
     printf("Escort Team %d ENTERS Zone %d\n", t->bus_id, zone_id);
     printf("    Zone %d has %d shoppers to drop off\n", zone_id, t->passenger_num);
     printf("    Dropping shoppers off...\n");
@@ -41,6 +48,7 @@ void print_end_drop_off_msg(BusTask* t, int zone_id) {
     printf("    Escort Team %d is at Zone %d and has %d/%d shoppers\n", t->bus_id, zone_id, t->passenger_num, t->bus_capacity);
     printf("    Zone %d has %d shoppers to drop off\n", zone_id, zone_people[zone_id]);
     printf("Escort Team %d LEAVES Zone %d\n", t->bus_id, zone_id);
+    pthread_mutex_unlock(&print_lock);
 }
 
 void* bus_routine(void* arg){
@@ -96,6 +104,7 @@ int main(const int argc, const char * argv[]){
     for(int i = 0; i < NUM_ZONES; i++){
         pthread_mutex_init(&zone_lock[i], NULL);
     }
+    pthread_mutex_init(&print_lock, NULL);
 
     // 建立 thread (每台巴士一個thread)
     pthread_create(&bus0, NULL, bus_routine, &task1); // create 需要函數指標(要做的工作)、需要的參數(想傳給函數的資訊)
