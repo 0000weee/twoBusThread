@@ -72,24 +72,23 @@ void* bus_routine(void* arg){
 
         // =========== 去 zone 1~4 選一個空的 drop off =====
         for (int i = 1; i < NUM_ZONES; i++) {
-            pthread_mutex_lock(&zone_lock[i]);
-            pthread_mutex_lock(&print_lock);
+        pthread_mutex_lock(&zone_lock[i]);
+        pthread_mutex_lock(&print_lock);
 
-            if (zone_people[i] != 0 && t->passenger_num > 0) {
-                print_start_drop_off_msg(t, i); // 開始放乘客
+        if (zone_people[i] != 0 && t->passenger_num > 0) {
+            print_start_drop_off_msg(t, i);
 
-                int drop_off = Min(t->passenger_num, zone_people[i]);
-                zone_people[i] -= drop_off; // 放乘客
-                t->passenger_num -= drop_off;// 更新車上乘客人數
+            int drop_off = Min(t->passenger_num, zone_people[i]);
+            zone_people[i] -= drop_off;
+            t->passenger_num -= drop_off;
 
-                print_end_drop_off_msg(t, i); // 放完乘客
-
-                pthread_mutex_unlock(&zone_lock[i]);
-                pthread_mutex_unlock(&print_lock);
-            }
-            pthread_mutex_unlock(&zone_lock[i]);
-            pthread_mutex_unlock(&print_lock);
+            print_end_drop_off_msg(t, i);
         }
+
+        pthread_mutex_unlock(&print_lock);
+        pthread_mutex_unlock(&zone_lock[i]);
+    }
+
     }
 }
 
