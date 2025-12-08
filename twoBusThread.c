@@ -28,6 +28,7 @@ void print_start_pick_up_msg(BusTask* t) {
 void print_end_pick_up_msg(BusTask* t) {
     printf("    Escort Team %d is at Zone 0 and has %d/%d shoppers\n", t->bus_id, t->passenger_num, t->bus_capacity);
     printf("    Zone 0 has %d shoppers to pick up\n", zone_people[0]);
+    printf("Escort Team %d LEAVES Zone 0\n", t->bus_id);
 }
 
 void print_start_drop_off_msg(BusTask* t, int zone_id) {
@@ -39,6 +40,7 @@ void print_start_drop_off_msg(BusTask* t, int zone_id) {
 void print_end_drop_off_msg(BusTask* t, int zone_id) {
     printf("    Escort Team %d is at Zone %d and has %d/%d shoppers\n", t->bus_id, zone_id, t->passenger_num, t->bus_capacity);
     printf("    Zone %d has %d shoppers to drop off\n", zone_id, zone_people[zone_id]);
+    printf("Escort Team %d LEAVES Zone %d\n", t->bus_id, zone_id);
 }
 
 void* bus_routine(void* arg){
@@ -77,8 +79,6 @@ void* bus_routine(void* arg){
                 print_end_drop_off_msg(t, i); // 放完乘客
 
                 pthread_mutex_unlock(&zone_lock[i]);
-
-                break;
             }
             pthread_mutex_unlock(&zone_lock[i]);
         }
