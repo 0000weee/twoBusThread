@@ -5,13 +5,13 @@ Escort Team 0 ENTERS Zone 0
     Zone 0 has 400 shoppers to pick up
 Escort Team 0 LEAVES Zone 0
 Escort Team 0 ENTERS Zone 1
-    Zone 1 has 100 shoppers to drop off
+    Zone 1 has 50 shoppers to drop off
     Dropping shoppers off...
     Escort Team 0 is at Zone 1 and has 50/100 shoppers
     Zone 1 has 0 shoppers to drop off
 Escort Team 0 LEAVES Zone 1
 Escort Team 0 ENTERS Zone 2
-    Zone 2 has 50 shoppers to drop off
+    Zone 2 has 100 shoppers to drop off
     Dropping shoppers off...
     Escort Team 0 is at Zone 2 and has 0/100 shoppers
     Zone 2 has 50 shoppers to drop off
@@ -23,50 +23,86 @@ Escort Team 0 ENTERS Zone 0
     Zone 0 has 300 shoppers to pick up
 Escort Team 0 LEAVES Zone 0
 Escort Team 0 ENTERS Zone 2
-    Zone 2 has 100 shoppers to drop off
+    Zone 2 has 50 shoppers to drop off
     Dropping shoppers off...
     Escort Team 0 is at Zone 2 and has 50/100 shoppers
     Zone 2 has 0 shoppers to drop off
 Escort Team 0 LEAVES Zone 2
 Escort Team 0 ENTERS Zone 3
-    Zone 3 has 50 shoppers to drop off
+    Zone 3 has 250 shoppers to drop off
     Dropping shoppers off...
     Escort Team 0 is at Zone 3 and has 0/100 shoppers
     Zone 3 has 200 shoppers to drop off
 Escort Team 0 LEAVES Zone 3
-Escort Team 0 ENTERS Zone 0
+Escort Team 1 ENTERS Zone 0
     Zone 0 has 300 shoppers to pick up
     Picking up shoppers...
-    Escort Team 0 is at Zone 0 and has 100/100 shoppers
-    Zone 0 has 200 shoppers to pick up
-Escort Team 0 LEAVES Zone 0
-Escort Team 0 ENTERS Zone 3
-    Zone 3 has 100 shoppers to drop off
+    Escort Team 1 is at Zone 0 and has 50/50 shoppers
+    Zone 0 has 250 shoppers to pick up
+Escort Team 1 LEAVES Zone 0
+Escort Team 1 ENTERS Zone 3
+    Zone 3 has 200 shoppers to drop off
     Dropping shoppers off...
-    Escort Team 0 is at Zone 3 and has 0/100 shoppers
+    Escort Team 1 is at Zone 3 and has 0/50 shoppers
+    Zone 3 has 150 shoppers to drop off
+Escort Team 1 LEAVES Zone 3
+Escort Team 1 ENTERS Zone 0
+    Zone 0 has 250 shoppers to pick up
+    Picking up shoppers...
+    Escort Team 1 is at Zone 0 and has 50/50 shoppers
+    Zone 0 has 200 shoppers to pick up
+Escort Team 1 LEAVES Zone 0
+Escort Team 1 ENTERS Zone 3
+    Zone 3 has 150 shoppers to drop off
+    Dropping shoppers off...
+    Escort Team 1 is at Zone 3 and has 0/50 shoppers
     Zone 3 has 100 shoppers to drop off
-Escort Team 0 LEAVES Zone 3
-Escort Team 0 ENTERS Zone 0
+Escort Team 1 LEAVES Zone 3
+Escort Team 1 ENTERS Zone 0
     Zone 0 has 200 shoppers to pick up
     Picking up shoppers...
-    Escort Team 0 is at Zone 0 and has 100/100 shoppers
-    Zone 0 has 100 shoppers to pick up
-Escort Team 0 LEAVES Zone 0
-Escort Team 0 ENTERS Zone 3
+    Escort Team 1 is at Zone 0 and has 50/50 shoppers
+    Zone 0 has 150 shoppers to pick up
+Escort Team 1 LEAVES Zone 0
+Escort Team 1 ENTERS Zone 3
     Zone 3 has 100 shoppers to drop off
     Dropping shoppers off...
-    Escort Team 0 is at Zone 3 and has 0/100 shoppers
+    Escort Team 1 is at Zone 3 and has 0/50 shoppers
+    Zone 3 has 50 shoppers to drop off
+Escort Team 1 LEAVES Zone 3
+Escort Team 1 ENTERS Zone 0
+    Zone 0 has 150 shoppers to pick up
+    Picking up shoppers...
+    Escort Team 1 is at Zone 0 and has 50/50 shoppers
+    Zone 0 has 100 shoppers to pick up
+Escort Team 1 LEAVES Zone 0
+Escort Team 1 ENTERS Zone 3
+    Zone 3 has 50 shoppers to drop off
+    Dropping shoppers off...
+    Escort Team 1 is at Zone 3 and has 0/50 shoppers
     Zone 3 has 0 shoppers to drop off
-Escort Team 0 LEAVES Zone 3
-Escort Team 0 ENTERS Zone 0
+Escort Team 1 LEAVES Zone 3
+Escort Team 1 ENTERS Zone 0
     Zone 0 has 100 shoppers to pick up
     Picking up shoppers...
-    Escort Team 0 is at Zone 0 and has 100/100 shoppers
-    Zone 0 has 0 shoppers to pick up
-Escort Team 0 LEAVES Zone 0
-Escort Team 0 ENTERS Zone 4
+    Escort Team 1 is at Zone 0 and has 50/50 shoppers
+    Zone 0 has 50 shoppers to pick up
+Escort Team 1 LEAVES Zone 0
+Escort Team 1 ENTERS Zone 4
     Zone 4 has 100 shoppers to drop off
     Dropping shoppers off...
-    Escort Team 0 is at Zone 4 and has 0/100 shoppers
+    Escort Team 1 is at Zone 4 and has 0/50 shoppers
+    Zone 4 has 50 shoppers to drop off
+Escort Team 1 LEAVES Zone 4
+Escort Team 1 ENTERS Zone 0
+    Zone 0 has 50 shoppers to pick up
+    Picking up shoppers...
+    Escort Team 1 is at Zone 0 and has 50/50 shoppers
+    Zone 0 has 0 shoppers to pick up
+Escort Team 1 LEAVES Zone 0
+Escort Team 1 ENTERS Zone 4
+    Zone 4 has 50 shoppers to drop off
+    Dropping shoppers off...
+    Escort Team 1 is at Zone 4 and has 0/50 shoppers
     Zone 4 has 0 shoppers to drop off
-Escort Team 0 LEAVES Zone 4
+Escort Team 1 LEAVES Zone 4

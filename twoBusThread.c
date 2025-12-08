@@ -34,7 +34,7 @@ void print_end_pick_up_msg(BusTask* t) {
 
 void print_start_drop_off_msg(BusTask* t, int zone_id) {
     printf("Escort Team %d ENTERS Zone %d\n", t->bus_id, zone_id);
-    printf("    Zone %d has %d shoppers to drop off\n", zone_id, t->passenger_num);
+    printf("    Zone %d has %d shoppers to drop off\n", zone_id, zone_people[zone_id]);
     printf("    Dropping shoppers off...\n");
 }
 
