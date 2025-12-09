@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <pthread.h>
+#include <unistd.h> // for sleep()
 
 #define NUM_ZONES 5
 
@@ -11,6 +12,11 @@ typedef struct {
     int passenger_num;
     int* zone_people_ptr; //指向zone_people
 } BusTask;
+
+void routine_time(int passenger_num) {
+    int sleep_time = passenger_num * 100;
+    usleep(sleep_time);
+}
 
 pthread_mutex_t zone_lock[NUM_ZONES];
 pthread_mutex_t print_lock;
@@ -63,6 +69,8 @@ void* bus_routine(void* arg){
         zone_people[0] -= pick_up;
         t->passenger_num += pick_up; // 更新車上人數
 
+        routine_time(pick_up);
+
         print_end_pick_up_msg(t); // 結束載人
         
         pthread_mutex_unlock(&zone_lock[0]);
@@ -81,6 +89,8 @@ void* bus_routine(void* arg){
             int drop_off = Min(t->passenger_num, zone_people[i]);
             zone_people[i] -= drop_off;
             t->passenger_num -= drop_off;
+
+            routine_time(drop_off);
 
             print_end_drop_off_msg(t, i);
         }
